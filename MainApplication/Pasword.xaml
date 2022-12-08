@@ -1,0 +1,47 @@
+﻿<Window x:Class="VerySpeedRunnerApp.Pasword"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VerySpeedRunnerApp"
+        mc:Ignorable="d"
+         WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        Height="174"
+        FontFamily="Century Gothic"
+        Activated="Win_Strat"
+        Width="200">
+    <Grid Background="#FFDE5B00">
+        <PasswordBox Name="PB"
+                     PasswordChar="?"
+                     Margin="0,0,0,130"
+                     Foreground="White"
+                     Background="Transparent"></PasswordBox>
+        <Button Content="Авторизоваться"
+                Click="GoToMain"
+                Background="#FF1134A0"
+                Foreground="White"
+                IsDefault="True"
+                Width="200" Margin="0,70,0,59">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20" />
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Я передумал"
+                Click="GoTOExit"
+                Background="#FF1134A0"
+                Foreground="White"
+                IsCancel="True"
+                Width="200" Margin="0,120,0,10">
+             <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20" />
+                </Style>
+            </Button.Resources>
+        </Button>
+
+    </Grid>
+</Window>
